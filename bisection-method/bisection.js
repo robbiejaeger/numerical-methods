@@ -18,7 +18,6 @@ function bisection(functionToSolve, lowCondition, highCondition, precision) {
     console.log('iteration: ', iterationTotal);
     console.log('bisection: ', bisection);
     console.log('outcome: ', outcome);
-    console.log('precision: ', precision);
     console.log('');
   }
 
