@@ -1,17 +1,17 @@
-function bisection(functionToSolve, lowInitialCondition, highInitialCondition, precision) {
+function bisection(functionToSolve, lowCondition, highCondition, precision) {
   let iterationTotal = 0;
   let outcome = 1; // arbitrary initial outcome (as long as it's greater than the precision)
   let bisection
 
   while (Math.abs(outcome) > precision && iterationTotal < 1000) {
-    bisection = (lowInitialCondition + highInitialCondition) / 2;
+    bisection = (lowCondition + highCondition) / 2;
 
     outcome = functionToSolve(bisection);
 
     if (outcome > 0) {
-      highInitialCondition = bisection;
+      highCondition = bisection;
     } else {
-      lowInitialCondition = bisection;
+      lowCondition = bisection;
     }
 
     iterationTotal++
